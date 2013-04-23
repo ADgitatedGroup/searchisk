@@ -1,0 +1,17 @@
+{
+  "name": "Searchиск",
+  "default_locale": "en",
+  "description" : "Suggests search within an amount of search engines. To use, type '»' plus a search term into the Omnibox.",
+  "version": "0.1.15",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "searchиск.png",
+    "48": "searchиск-48x48.png",
+    "64": "searchиск-64x64.png",
+    "128": "searchиск-128x128.png"
+  },
+  "omnibox": { "keyword" : "»" },
+  "manifest_version": 2
+}

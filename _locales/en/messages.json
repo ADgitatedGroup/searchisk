@@ -1,0 +1,14 @@
+{
+	"extName": {
+		"message": "Smart Quote",
+		"description": "The name of the extension"
+	},
+	"extDescription": {
+	    "message": "Simply right-click on image/selection and choose the menu item “Quote it!” The properly HTML5-compliant code will be produced to insert into your blog/whereever.",
+	    "description": "The description of the extension"
+	},
+	"menuItemCaption": {
+		"message": "Quote it!",
+		"description": "The caption of menu item"
+	}
+}
