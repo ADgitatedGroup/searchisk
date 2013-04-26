@@ -1,8 +1,8 @@
 {
-  "name": "Searchиск",
+  "name": "__MSG_extName__",
   "default_locale": "en",
-  "description" : "Suggests search within an amount of search engines. To use, type '»' plus a search term into the Omnibox.",
-  "version": "0.1.15",
+  "description" : "__MSG_extDescription__",
+  "version": "0.2.4",
   "background": {
     "scripts": ["background.js"]
   },

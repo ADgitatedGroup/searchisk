@@ -1,14 +1,54 @@
 {
 	"extName": {
-		"message": "Вежливая цитата",
+		"message": "Searchиск",
 		"description": "Название расширения"
 	},
 	"extDescription": {
-	    "message": "Копирует в буфер обмена картинки и текст, по-человечески форматируя.",
+	    "message": "Добавляет в Omnibox возможность искать в разных поисковых системах, сразу искать картинки, переводить.",
 	    "description": "Описание расширения"
 	},
-	"menuItemCaption": {
-		"message": "Цитировать!",
-		"description": "Заголовок пункта меню"
+	"translate": {
+		"message": "Перевести",
+		"description": "Translate"
+	},
+	"search": {
+		"message": "Искать",
+		"description": "Search"
+	},
+	"against": {
+		"message": "в",
+		"description": "Against"
+	},
+	"google": {
+		"message": "<dim>Гугле</dim>",
+		"description": "Google"
+	},
+	"bing": {
+		"message": "<dim>Микрософт Бинг</dim>",
+		"description": "Bing"
+	},
+	"wikipedia": {
+		"message": "<dim>Википедии</dim>",
+		"description": "Wikipedia"
+	},
+	"youtube": {
+		"message": "<dim>Ю-Тубе</dim>",
+		"description": "Youtube"
+	},
+	"yandex": {
+		"message": "<dim>Яндексе</dim>",
+		"description": "Yandex"
+	},
+	"lingvo": {
+		"message": "<dim>Лингво</dim>",
+		"description": "Lingvo"
+	},
+	"yandex_images": {
+		"message": "<dim>картинках Яндекса</dim>",
+		"description": "Yandex Images"
+	},
+	"russian_wikipedia": {
+		"message": "<dim>Вики на русском</dim>",
+		"description": "Russian wikipedia"
 	}
 }

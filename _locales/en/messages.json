@@ -1,14 +1,54 @@
 {
 	"extName": {
-		"message": "Smart Quote",
+		"message": "Searchиск",
 		"description": "The name of the extension"
 	},
 	"extDescription": {
-	    "message": "Simply right-click on image/selection and choose the menu item “Quote it!” The properly HTML5-compliant code will be produced to insert into your blog/whereever.",
+	    "message": "Suggests search within an amount of search engines. To use, type '»' plus a search term into the Omnibox.",
 	    "description": "The description of the extension"
 	},
-	"menuItemCaption": {
-		"message": "Quote it!",
-		"description": "The caption of menu item"
+	"translate": {
+		"message": "Translate",
+		"description": "Translate"
+	},
+	"search": {
+		"message": "Search",
+		"description": "Search"
+	},
+	"against": {
+		"message": "against",
+		"description": "Against"
+	},
+	"google": {
+		"message": "<dim>Google</dim>",
+		"description": "Google"
+	},
+	"bing": {
+		"message": "<dim>Bing</dim>",
+		"description": "Bing"
+	},
+	"wikipedia": {
+		"message": "<dim>Wikipedia</dim>",
+		"description": "Wikipedia"
+	},
+	"youtube": {
+		"message": "<dim>YouTube</dim>",
+		"description": "Youtube"
+	},
+	"yandex": {
+		"message": "<dim>Yandex</dim>",
+		"description": "Yandex"
+	},
+	"lingvo": {
+		"message": "<dim>Lingvo</dim>",
+		"description": "Lingvo"
+	},
+	"yandex_images": {
+		"message": "<dim>Yandex Images</dim>",
+		"description": "Yandex Images"
+	},
+	"russian_wikipedia": {
+		"message": "<dim>Russian wikipedia</dim>",
+		"description": "Russian wikipedia"
 	}
 }
