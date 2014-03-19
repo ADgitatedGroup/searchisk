@@ -44,6 +44,10 @@ function generalSuggest(text) {
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("wikipedia")
     },
     {
+      content: "http://slovari.yandex.ru/" + text + "/перевод/#lingvo", 
+      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo")
+    },
+    {
       content: "http://www.bing.com/search?q=" + text, 
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("bing")
     },
