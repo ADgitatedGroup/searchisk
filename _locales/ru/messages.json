@@ -11,6 +11,22 @@
 		"message": "Перевести",
 		"description": "Translate"
 	},
+	"to_english": {
+		"message": "на английский",
+		"description": "To English"
+	},
+	"from_english": {
+		"message": "с английского",
+		"description": "From English"
+	},
+	"to_spanish": {
+		"message": "на испанский",
+		"description": "to spanish"
+	},
+	"from_spanish": {
+		"message": "с испанского",
+		"description": "From Spanish"
+	},
 	"search": {
 		"message": "Искать",
 		"description": "Search"

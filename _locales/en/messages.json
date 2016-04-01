@@ -11,6 +11,22 @@
 		"message": "Translate",
 		"description": "Translate"
 	},
+	"to_english": {
+		"message": "to English",
+		"description": "To English"
+	},
+	"from_english": {
+		"message": "from English",
+		"description": "From English"
+	},
+	"to_spanish": {
+		"message": "to Spanish",
+		"description": "to spanish"
+	},
+	"from_spanish": {
+		"message": "from Spanish",
+		"description": "From Spanish"
+	},
 	"search": {
 		"message": "Search",
 		"description": "Search"

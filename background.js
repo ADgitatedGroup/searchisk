@@ -10,23 +10,24 @@ function russianSuggest(text) {
   text_p = text.replace(/\s+/g, "+");
   return [
     {
-      content: "http://slovari.yandex.ru/" + text + "/перевод/#lingvo", 
-      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo")
+      // https://translate.yandex.ru/?text=intelligence%20services&lang=en-ru
+      content: "http://translate.yandex.ru/?text=" + text + "&lang=ru-en",
+      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo") + " " + chrome.i18n.getMessage("to_english")
     },
     {
-      content: "http://yandex.ru/yandsearch?text=" + text, 
-      description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("yandex")
-    },
-    { 
-      content: "http://images.yandex.ru/yandsearch?text=" + text, 
-      description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("yandex_images")
+      content: "http://translate.yandex.ru/?text=" + text + "&lang=ru-es",
+      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo") + " " + chrome.i18n.getMessage("to_spanish")
     },
     {
-      content: "http://ru.wikipedia.org/wiki/" + text, 
+      content: "http://ru.wikipedia.org/wiki/" + text,
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("russian_wikipedia")
     },
     {
-      content: "http://www.youtube.com/results?search_query=" + text_p + "&oq=" + text_p, 
+      content: "http://yandex.ru/yandsearch?text=" + text,
+      description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("yandex")
+    },
+    {
+      content: "http://www.youtube.com/results?search_query=" + text_p + "&oq=" + text_p,
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("youtube")
     }
   ]
@@ -36,23 +37,24 @@ function generalSuggest(text) {
   text_p = text.replace(/\s+/g, "+");
   return [
     {
-      content: "https://www.google.com/search?q=" + text, 
-      description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("google")
+      // https://translate.yandex.ru/?text=intelligence%20services&lang=en-ru
+      content: "http://translate.yandex.ru/?text=" + text + "&lang=en-ru",
+      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo") + " " + chrome.i18n.getMessage("from_english")
     },
-    { 
-      content: "http://en.wikipedia.org/wiki/" + text, 
+    {
+      content: "http://translate.yandex.ru/?text=" + text + "&lang=es-ru",
+      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo") + " " + chrome.i18n.getMessage("from_spanish")
+    },
+    {
+      content: "http://en.wikipedia.org/wiki/" + text,
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("wikipedia")
     },
     {
-      content: "http://slovari.yandex.ru/" + text + "/перевод/#lingvo", 
-      description: chrome.i18n.getMessage("translate") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("lingvo")
-    },
-    {
-      content: "http://www.bing.com/search?q=" + text, 
+      content: "http://www.bing.com/search?q=" + text,
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("bing")
     },
     {
-      content: "http://www.youtube.com/results?search_query=" + text_p + "&oq=" + text_p, 
+      content: "http://www.youtube.com/results?search_query=" + text_p + "&oq=" + text_p,
       description: chrome.i18n.getMessage("search") + " " + matchText(text) + " " + chrome.i18n.getMessage("against") + " " + chrome.i18n.getMessage("youtube")
     }
   ]
@@ -77,8 +79,8 @@ function navigate(url) {
 }
 
 function defaultSuggestion(text) {
-  chrome.omnibox.setDefaultSuggestion(text ? 
-    {content: "https://www.google.com/search?q=" + text, description: "Search <match>" + text + "</match> against Google"} :
+  chrome.omnibox.setDefaultSuggestion(text ?
+    {description: "Search <match>" + text + "</match> against Google"} :
     {description: 'Искать в <dim>Яндексе</dim>'}
   );
 }
@@ -94,6 +96,6 @@ chrome.omnibox.onInputEntered.addListener(
     if ('http' == text.substring(0,4)) {
       navigate(text);
     } else {
-      navigate("http://yandex.ru/yandsearch?text=" + text);
+      navigate("http://translate.yandex.ru/?text=" + text);
     }
   });
